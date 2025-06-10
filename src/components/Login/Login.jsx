@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./components/style/Login.css";
+import "./Login.css";
 
 function Login({ onLogin }) {
   const [mostrarRegistro, setMostrarRegistro] = useState(false);

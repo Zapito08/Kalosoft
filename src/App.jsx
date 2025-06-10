@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import SinLoguear from "./sinloguear";
-import Login from "./Login";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Contacto from "./components/Contacto";
+import SinLoguear from "./components/SinLoguear/sinloguear";
+import Login from "./components/Login/Login";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Contacto from "./components/Contacto/Contacto";
 
 function App() {
   const [logueado, setLogueado] = useState(false);

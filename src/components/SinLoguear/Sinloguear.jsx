@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import Navbar from "./components/Navbar";
-import "./components/style/Sinloguear.css";
+import Navbar from "../Navbar/Navbar";
+import "./Sinloguear.css";
 
 function SinLoguear({ onIniciarSesion, onRegistrar }) {
   const sliderRef = useRef(null);
