@@ -1,0 +1,33 @@
+
+.contacto-info div:hover {
+    transform: scale(1.05);
+    background-color: #f2994b;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-info div.click-feedback {
+    animation: vibrar 0.2s ease;
+}
+
+/* tambien aunmeta el tamano para dispositivos moviles */
+
+@media (max-width: 768px) {
+.slider-container {
+    width: 90%;
+}
+
+.buscar {
+     width: 100%;
+}
+
+.botones {
+    width: 100%;
+    flex-direction: column;
+}
+
+.contacto-info div {
+    width: 100%;
+}
+}

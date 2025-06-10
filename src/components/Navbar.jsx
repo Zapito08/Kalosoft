@@ -1,16 +1,13 @@
 import React from "react";
-import "./style/Navbar.css"; // Asegúrate de que la ruta sea correcta
+import "./Navbar.css"; // Asegúrate de que la ruta sea correcta
 
 function Navbar({ onIniciarSesion, onRegistrar }) {
   return (
     <header>
       <div className="menu">
-        {/* Logo */}
         <div className="logo">
           <img src="/img/DKLM.jpg" alt="Logo Arepas la Karola" />
         </div>
-
-        {/* Barra de búsqueda */}
         <form
           className="buscar"
           onSubmit={(e) => {
@@ -21,8 +18,6 @@ function Navbar({ onIniciarSesion, onRegistrar }) {
           <input type="text" placeholder="Buscar el producto" />
           <button type="submit">Buscar</button>
         </form>
-
-        {/* Botones de sesión */}
         <nav className="botones">
           <button onClick={onIniciarSesion} className="btn-iniciar">
             Iniciar sesión

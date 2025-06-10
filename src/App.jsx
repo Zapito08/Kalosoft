@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import SinLoguear from "./SinLoguear";
+import SinLoguear from "./sinloguear";
 import Login from "./Login";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Contacto from "./components/Contacto";
 
 function App() {
   const [logueado, setLogueado] = useState(false);
@@ -32,14 +34,19 @@ function App() {
         <Navbar onIniciarSesion={irALogin} onRegistrar={irALogin} />
       )}
 
+      {/* Mostrar SinLoguear cuando no está logueado ni en login */}
       {!logueado && !mostrarLogin && (
-        <SinLoguear onIniciarSesion={irALogin} onRegistrar={irALogin} />
+        <>
+          <SinLoguear onIniciarSesion={irALogin} onRegistrar={irALogin} />
+          <Contacto />
+          <Footer />
+        </>
       )}
 
-      {!logueado && mostrarLogin && (
-        <Login onLogin={manejarLoginExitoso} />
-      )}
+      {/* Mostrar Login */}
+      {!logueado && mostrarLogin && <Login onLogin={manejarLoginExitoso} />}
 
+      {/* Mostrar panel logueado */}
       {logueado && (
         <div style={{ padding: "20px", textAlign: "center" }}>
           <h1>Bienvenido, estás logueado!</h1>
