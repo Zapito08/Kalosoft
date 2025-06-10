@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(253, 241, 215);
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #fdf9f6;
+}
+
+.color1 {
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+}
+
+/* slider de fotos */
+
+.slider-container {
+    width: 37%;
+    height: 100%;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(255, 217, 0);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background: #ffb44a;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+/* aqui va el apartado de la cajita de las ventas */
+
+.ventas h1,
+.ventas1 h1,
+.ventas2 h1{
+    text-align: center;
+    color:#ffa264;
+    border: 1px solid rgb(0, 0, 0);
+    font-family:serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+.galeria-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-producto {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info-producto {
+    padding: 20px;
+    text-align: center;
+}
+
+.info-producto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.info-producto p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.info-producto span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.info-producto button {
+    padding: 10px 20px;
+    background-color: rgb(255, 217, 0);
+    border: none;
+    border-radius: 30px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-producto button:hover {
+    background-color: #ffb44a;
+}
+
+.galeria-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-producto {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-producto {
+    padding: 15px;
+    text-align: center;
+}
+
+.info-producto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.info-producto p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.info-producto span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.info-producto button {
+    padding: 10px 20px;
+    background-color: rgb(255, 217, 0);
+    border: none;
+    border-radius: 30px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-producto button:hover {
+    background-color: #ffb44a;
+}
+
+
+/* informacion de la pagina */
+
+.infografia {
+    width: 100%;
+    padding: 2rem;
+    background: rgb(253, 241, 215);
+    text-align: center;
+}
+
+.infografia h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #e67e22;
+}
+
+.infografia-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.dato {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.dato:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icono {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.dato h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #e67e22;
+}
+
+.dato p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.contacto {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contacto-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contacto-info div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.boton-cta:hover {
+    background-color: #d87926;
+}
+
+.contacto-info h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contacto-info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.boton-cta {
+    display: inline-block;
+    background-color: #e67e22;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-cta:hover {
+    background-color: #d45f14;
+}
+
+
+/* informacion para conctatar la empresa */
+
+.contacto-info div:hover {
+    transform: scale(1.05);
+    background-color: #f2994b;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-info div.click-feedback {
+    animation: vibrar 0.2s ease;
+}
+
+/* tambien aunmeta el tamano para dispositivos moviles */
+
+@media (max-width: 768px) {
+.slider-container {
+    width: 90%;
+}
+
+.buscar {
+     width: 100%;
+}
+
+.botones {
+    width: 100%;
+    flex-direction: column;
+}
+
+.contacto-info div {
+    width: 100%;
+}
+}
+
+@keyframes vibrar {
+    0% { transform: scale(1.05) translateX(0); }
+    25% { transform: scale(1.05) translateX(-3px); }
+    50% { transform: scale(1.05) translateX(3px); }
+    75% { transform: scale(1.05) translateX(-2px); }
+    100% { transform: scale(1.05) translateX(0); }
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    background-color: rgb(255, 217, 0);
+    border: solid 1px rgb(0, 0, 0);
+}

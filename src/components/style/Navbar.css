@@ -1,0 +1,105 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.menu {
+    height: 180px;
+    width: 100%;
+    background: rgb(255, 217, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border: solid 1px rgb(63, 58, 58);
+}
+
+.logo img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(212, 205, 205, 0.2);
+}
+
+.buscar input {
+    background: #fff;
+    color: black;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+
+.buscar button {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buscar button:hover {
+    background-color: #575757;
+}
+
+.botones {
+    width: 25%;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.btn-iniciar,
+.btn-registrar {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-iniciar:hover,
+.btn-registrar:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.botones a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.botones a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .buscar {
+        width: 100%;
+    }
+
+    .botones {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
